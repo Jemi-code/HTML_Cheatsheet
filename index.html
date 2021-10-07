@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning HTML with Jemimah</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="data:image/png;base64,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" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <h1 id = "title" class = "main_heading">HTML Cheatsheet</h1>
+        <h2 id = "semihead">Fast coding with Jemi-code</h2>
+        <p class = "para">Learning HTML in itself is not difficult, but finding the right materials are. I hope you learn a lot from this little documentation I have done here to kick start your coding journey. For a more indepth understanding with projects, kindly visit <a href="https://www.freecodecamp.org/signin">freeCodeCamp</a> and start a lesson now. Enjoy!</p>
+    </header>
+
+    <div id="body">
+        <div id="aside">
+            <nav id = "navbar">
+                <header class = "nav-head">Table of content</header>
+                    
+                <ul>
+                    <li class = "nav-li"><a class = "nav-link" href="#Introduction">Introduction</a></li>
+                    <li class = "nav-li"><a class = "nav-link" href="#What_you_need">What you need</a></li>
+                    <li class = "nav-li"><a class = "nav-link" href="#How_to_view_the_code">How to view the code</a></li>
+                    <li class = "nav-li"><a class = "nav-link" href="#Basic_HTML_tags">Basic HTML tags</a></li>
+                    <li class = "nav-li"><a class = "nav-link" href="#Text_editing_tags">Text editing tags</a></li>
+                    <li class = "nav-li"><a class = "nav-link" href="#Media_tags">Media tags</a></li>
+                    <li class = "nav-li"><a class = "nav-link" href="#Other_tags">Other tags</a></li>
+                </ul>
+            </nav>
+        </div>
+      
+
+        <div id="content">
+            <main id = "main-doc">
+                <section class="main-section" id = "Introduction">
+                    <header class = "head3">Introduction</header>
+                    <p>
+                        The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS), which defines the look and layout of the content in the webpage and scripting languages such as JavaScript, which define behavior and content of webpages. Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the document. HTML is not a programming language; it is a scripting language.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        In late 1990, a physicist Tim Berners-Lee in an attempt for fellow CERN researchers to use and share documents online, developed HTML as well as the browser and server software. There have been 5 versions of HTML since 1990 – HTML, HTML 2, HTML 3, HTML 4 and the one mostly used by all browsers, HTML 5. HTML 5 is what is used on most browsers and thus will where most of our lessons will be focused on. 
+                    </p>
+
+                    <br>
+
+                    <p>As expected, HTML 5 is an updated version of HTML 4, with allocations for media, such as videos and others.
+                    </p>
+                </section>
+
+                <br>
+                <br>
+
+                <section class="main-section" id = "What_you_need">
+                    <header class = "head3">What you need</header>
+
+                    <p>
+                        To learn and write HTML, you need a laptop and a hyper text editor such as notepad, notepad++, sublime text, visual studio code and atom. The text editors are not limited to the above. I would not give any recommendations because it depends on the person using the editors.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        If you do not have access to a laptop, there are many phone apps that can enable you to code on your mobile phone such as, TrebEdit, HTML Editor, Html Editor, Acode among others. It is not recommended, but if you want to kick start your journey without a laptop, you can go ahead and use them. Some learning programming apps have imbedded text editors in them such as Sololearn, Programming hub, Programming Hero and Mimo.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        You also need a browser to view your code. Many of the popular web browsers will suffice such as Google Chrome, Explorer and others Mozilla Firefox.
+                    </p>
+                </section>
+
+                <br>
+                <br>
+
+                <section class="main-section" id = "How_to_view_the_code">
+                    <header class = "head3">How to view the code</header>
+                    
+                    <p>
+                        To view the result of your code, you right click your written code, click on open with, and then open it with the browser of your choice. You could also simply drag and drop your HTML file into your browser.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Viewing code is the simplest thing you’ll learn in HTML, lol.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Now, without further ado, let’s write code!
+                    </p>
+
+                    <br>
+
+                    <p>
+                        To tell the browser which version of HTML we are using, we start each HTML documentation with,
+                        <code>&lt!DOCTYPE html&gt</code>
+                    </p>
+
+                    <br>
+
+                    <p>
+                        If you’re panicking, don’t. Nothing is supposed to appear just yet. We’re just giving the browser a little heads-up on how we want the page to look.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Without this, the browser will not display the page correctly. The brackets the code in is called tags, we will learn more of them in subsequent chapters.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Clap for yourself, you’ve written your first code!
+                    </p>
+                        
+                </section>
+
+                <br>
+                <br>
+
+                <section class="main-section" id = "Basic_HTML_tags">
+                    <header class = "head3">Basic HTML tags</header>
+                    
+                    <p>
+                        There are 142 HTML tags available. Do not be discouraged, you do not need to know all of them right now, even experts do not use all the tags.  
+                    </p>
+
+                    <br>
+
+                    <p>
+                        We will start with the first 5 basic tags; I think these have been there since forever.
+                    </p>
+
+                    <br>
+
+                    <h4>Html tags</h4>
+
+                    <p>
+                        This is the container for all the code you will write, it is written directly below Doctype html and every other code you write, even CSS and JavaScript are written in side of this. They also indicate the beginning and end of every webpage. It is written as,
+                        <code>&lthtml&gtYour code&lt/html&gt</code>
+                    </p>
+
+                    <br>
+
+                    <p>
+                        It also contains other tags that add functionality to the web page that are not specifically the body or the content of your webpage such as the title of the webpage, external font or styling links and tags, the function of the webpage, the icon that will display among others.
+                    </p>
+
+                    <br>
+
+                    <h4>Body tags</h4>
+
+                    <p>
+                        This is the container for the body of the webpage. All items or code under this shows the actual content of the webpage that is what the owner or designer of the webpage wants to put across. It is written as, 
+                        <code>&ltbody&gtYour body code&lt/body&gt</code>
+
+                    </p>
+
+                    <br>
+
+                    <h4>Header tags</h4>
+
+                    <p>
+                        Before you write your essay, there has to be a heading. It normally has a bigger font than other elements in the essay. This goes the same for a webpage, it is written as, 
+                        <code>&lth1&gtHeading&lt/h1&gt</code>
+                    </p>
+
+                    <br>
+
+                    <p>
+                        There are other kinds of headings in an essay and webpage, smaller headings. In HTML we can write them, 
+                    </p>
+
+                    <code>&lth2&gtHeading&lt/h2&gt</code>
+                    <code>&lth3&gtHeading&lt/h3&gt</code>
+                    <code>&lth4&gtHeading&lt/h4&gt</code>
+                    <code>&lth5&gtHeading&lt/h5&gt</code>
+                    <code>&lth6&gtHeading&lt/h6&gt</code>
+
+                    <p>
+                        It is viewed as,
+                        <br><br>
+                            <h1>Heading</h1>
+                            <h2>Heading</h2>
+                            <h3>Heading</h3>
+                            <h4>Heading</h4>
+                            <h5>Heading</h5>
+                            <h6>Heading</h6>
+                    </p>
+
+                    <p>In order of precedence</p>
+
+                    <br>
+
+                    <h4>Paragraph tags</h4>
+
+                    <p>
+                        Just as your essay needs paragraphs, your web page needs some as well. It is written as,
+                        <code>&ltp&gtParagraph&lt/p&gt</code>
+                    </p>
+                    
+                    <br>
+
+                    <h4>Break tag</h4>
+                    <p>
+                        This tag leaves a line break in the text. It allows the text to look spaced out and breathable. It is written as, 
+                     <code>&ltbr&gt</code>
+                    </p> 
+
+                    <p>
+                        The break tag is called as a self-closing tag. This simply means that it does not need a closing tag like most tags.
+                    </p>
+
+                    <p>
+                        We can do something cool with this. So, take out your text editors and let’s do something cool.
+                    </p>
+
+                    <div id="demo">
+                        <code>
+                            &lt!DOCTYPE html&gt
+                            <br>
+                            &lthtml&gt
+                            <br>
+                            &ltbody&gt
+                            <br>
+                            &lth1&gtHello World&lt/h1&gt
+                            <br>
+                            &ltp&gtRain drops on roses and whiskers on kitten&lt/p&gt
+                            <br>
+                            &ltp&gtSnowflakes that fall on my nose and eyelashes&lt/p&gt
+                            <br>
+                                       &ltbr&gt
+                                       <br>
+                            &ltp&gtWild geese that fly with the moon on their wings&lt/p&gt
+                            <br>
+                            &ltp&gtThese are a few of my favorite things&lt/p&gt
+                            <br>
+                        &lt/body&gt
+                        <br>
+                        &lt/html&gt
+                        <br>
+                        </code>
+                        
+                        <p>Open this in your browser and see yourself smile.</p>
+                    </div>
+                </section>
+
+                <section class="main-section" id = "Text_editing_tags">
+                    <header class = "head3">Text editing tags</header>
+
+                    <p>
+                        I call them text editing tags because as the name indicates, it edits texts in a webpage. They include;
+                    </p>
+
+                    <br>
+
+                    <h4>Emphasis tags</h4>
+
+                    <p>
+                        These give special emphasis to text. We normally call it italics. They can be written as,
+                            <code>&ltem&gtItalics&lt/em&gt</code>
+                            <em>Italics</em>
+                            <br>
+                            Or
+                            <code><i>Italics</i></code>
+                            <i>Italics</i>
+                    </p>        
+                    <br>
+                    
+                    <p>
+                    They are written differently, but are the same tags in functionality, so feel free to remember just one or both, who cares! It’s your code.
+                    </p>
+
+                    <br>
+
+                    <h4>Strong tag</h4>
+
+                    <p>These are tags that define text as important. We normally call it bold text. It is written as</p>
+                        <code>&ltstrong&gtBold&lt/strong&gt</code>
+                        <strong>Bold</strong>
+                        <br>
+                        Or
+                        <code><b>Bold</b></code>
+                        <b>Bold</b>
+
+                        <br>
+                        <br>
+
+                        <p>
+                            They are written differently, but are the same tags in functionality, so feel free to remember just one or both, who cares! It’s your code.
+                        </p>
+                        
+                        <br>
+
+                        <h4>Underline tags</h4>
+
+                        <p>This tag underlines text and is written as,</p>
+                                <code>&ltu&gtUnderline&lt/u&gt</code>
+                                <u>Underline</u>
+
+                                <br>
+                                <br>
+                        <h4>Strike-through tags</h4>
+                        
+                        <p>This tag puts a line across text</p>
+                        <code>&lts&gtStrikethrough&lt/s&gt</code>
+                        <s>Strikethrough</s>
+
+                        <br>
+                        <br>
+
+                        <h4>Horizontal rule tag</h4>
+                        <p>This tag is used to insert a horizontal rule or a thematic break in an HTML page to divide or separate document sections. It is written as,</p>
+                        <code>&lthr&gt</code>
+                        <hr>
+                        <br>
+                        <p>This is a self-closing tag, like the break tag.</p>
+                        
+                        <br>
+
+                        <p>Let’s use these new tags to create something amazing.</p>
+
+                        <code>
+                            &lt!DOCTYPE html&gt
+                            <br>
+                            &lthtml&gt
+                            <br>
+                            &ltbody&gt
+                            <br>
+                                &lth1&gt&ltu&gtHello World&lt/u&gt&lt/h1&gt
+                                <br>
+                                &ltp&gt&lti&gtRain&lt/i&gt &ltem&gtdrops&lt/em&gt on roses and whiskers on &lts&gtkettles&lt/s&gt kittens&lt/p&gt
+                                <br>
+                                &ltp&gtSnowflakes that fall on my nose and eyelashes&lt/p&gt
+                                <br>
+                                           &ltbr&gt
+                                           <br>
+                                &lthr&gt
+                                <br>
+                                &ltp&gt&ltb&gtWild&lt/b&gt &ltstrong&gtgeese&lt/strong&gt that fly with the moon on their wings&lt/p&gt
+                                <br>
+                                &ltp&gtThese are a few of my favorite things&lt/p&gt
+                                <br>
+                            &lt/body&gt
+                            <br>
+                            &lt/html&gt
+                            </code>
+
+                            <p>Open this in your browser and see how different it is from the first one</p>
+                </section>
+
+                <section class="main-section" id = "Media_tags">
+                    <header class = "head3">Media tags</header>
+
+                    <p>Enough with text for now, let’s add some media elements to our document.</p>
+                    
+                    <br>
+
+                    <h4>Image tag</h4>
+
+                    <p>This tag adds images to the webpage. It is written as,</p>
+                    <code>&ltimg src = “link for image” alt = “name of picture”&gt</code>
+
+                    <p>Src means source and you are to put in the source of your image, if it is on the internet, indicate the link. If it is on the machine and the image is in the same folder just write the name of the image along with the extension. An example would be,</p>
+                    <code>&ltimg src = “cats are cute.jpg”&gt</code>
+
+                   <p> If the picture is in a folder inside the folder where your HTML file is then it would be,</p>
+                   <code>&ltimg src = “/images/cats are cute.jpg&gt</code>
+
+                   <p>If your image is not even close your folder, open the picture in your browser and copy the link.
+                    
+                   <p>Alt is short for alternate text and is used to give an alternate text for the image just in case the image does not show up due to connectivity issues or a broken link. An example for the use of alternate text is,</p>
+                   <code>&ltimg src = “link of cat” alt = “a picture of Mr. snuffles having a bath”&gt</code>
+
+                   <p>You can also determine the width or height of an image and it is written as,</p>
+                   <code>&ltimg src = “link of cat” alt = “a picture of Mr. snuffles having a bath” height = “200px” width = “300px”&gt</code>
+
+                   <p>This gives the picture of Mr. snuffles a height of 200px and a width of 300px. You can also use percentages, em/ rem or vh.</p>
+                    
+                   <p>To combine what we’ve learnt, it will display as,</p>
+                   <br>
+                    <img src = "https://s36537.pcdn.co/wp-content/uploads/2015/08/Cat-in-sink-shutterstock_181016582.jpg.optimal.jpg" alt = "a picture of Mr. snuffles having a bath" height = "200px" width = "300px">
+                    <br>
+                    <br>
+
+                    <p>If the link is a broken link, it’ll display as,</p>
+                    <br>
+                    <img src = "https://s36537.pcdn.co/wp-content/uploads/2015/08/Cat-in-sink-shutterstock_181016582.jpg.optial.jpg" alt = "a picture of Mr. snuffles having a bath" height = "200px" width = "300px">
+
+                    <br>
+                    <br>
+
+                    <h4>Video</h4>
+
+                    <p>There are two main ways to put a video into your webpage. They are,</p>
+                     <ul>
+                         <li>
+                            <code>&ltvideo autoplay muted loop controls poster = “url” preload = “auto or metadata or none”&gt
+                                <br>
+                                &ltsource src = “video-url” type = “video/mp4”&gt
+                                <br>
+                                Your browser does not support HTML5 video
+                            &lt/video&gt
+                        </code>
+
+                        <p>It looks scary, but don’t be scared, let me simply explain it to you.</p>
+                        <br> 
+                        <p>A video tag can have one or more source with different video extensions (.ogg or .mp4) and the browser chooses the one it will play.
+                            <br>
+                                Autoplay specifies that the video will start playing as soon as it is ready.
+                                <br>
+                                Controls will give video controls to the inputted video such as play, pause etc
+                                <br>
+                                Loop means that the video will never stop, it will start over every time it is finished.
+                                <br>
+                                Muted simply means that will be no sound for the video
+                                <br>
+                                Poster it gives an image to be shown while the video is downloading, or until the play button is clicked.
+                                <br>
+                                Preload it specifies how the author thinks the video should be loaded when the page loads.
+                                <br>
+                                Auto means the video will load or play alongside the webpage
+                                <br>
+                                Metadata means the browser should only load the metadata when the page loads
+                                <br>
+                                None means the browser should not load the video when the page loads.
+                                <br>
+                                Note: preload is ignored if auto play is present.
+                                <br>
+                                “Your browser does not support HTML5 video” will display if your browser does not support HTML5 video.</p>
+                                <br>
+                         </li>
+
+                         <li>
+                            <p>Another way is using the iframe tag which us short for inline frame tag. It not only displays videos, but other documents or web pages inside it. An example is,</p>
+                            <code>&ltiframe width = "" src = "Video URL" frameborder = "0" allowfullscreen&gt&lt/iframe&gt</code>
+                            <p>
+                            Frameboarder allows you to alter the width of the border of the image.
+                            <br>
+                            Allowfullscreen is a function that can help you view it as full screen.
+                            <br>
+                            If you want to upload a YouTube video, just right click it and click on copy embedded code and copy it unto your web browser. Easy peesy lemon squeezy right?
+                            </p>
+                         </li>
+                     </ul>
+
+                     <br><br>
+
+                     <p>Here are some videos I’ve uploaded, but twice using both methods.</p>
+                        <video controls poster = "https://i.pinimg.com/originals/42/d3/e3/42d3e3ebfe57b50b0c6aa6ab7b26989d.jpg" preload = "none" width = "200px" height = "150px">
+                            <source src = "https://ak.picdn.net/shutterstock/videos/11025413/preview/stock-footage-cute-cat-in-bath-tube-under-shower-low-angle-of-female-person-holding-young-kitty-in-shower-cabin.webm" type = "video/mp4">
+                            Your browser does not support HTML5 video
+                            </video>
+
+                        <br>
+                        <br>
+
+                        <iframe width="853" height="480" src="https://www.youtube.com/embed/cbP2N1BQdYc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                        <br><br>
+
+                        <h4>Audio tag</h4>
+
+                        <p>This works the same way as the video tag and is written,</p>
+                            <code>&ltaudio controls&gt
+                                <br>
+                            &ltsource src="horse.ogg" type="audio/ogg"&gt
+                            <br>
+                            &ltsource src="horse.mp3" type="audio/mpeg"&gt
+                            <br>
+                            Your browser does not support the audio tag.
+                            <br>
+                            &lt/audio&gt</code>
+
+                        
+                            <br>
+                            <br>
+
+                            <p>And that’s it for the media tags, keep practicing.</p>
+                </section>
+
+                <section class="main-section" id = "Other_tags">
+                    <header class = "head3">Other tags</header>
+                    
+                    <p>There are so many other tags, unfortunately I’m not going to write all of them because <s>I am tired and my fingers hurt</s> this documentation is for beginners, when you are done with this one, go to <a href = “”>freeCodeCamp</a> for more lessons.</p>
+
+                    <ul>
+                        <li><h3>Button tag</h3></li>
+                            <p>
+                                It is used for putting buttons unto your webpage. It is written as,
+                                <code>&ltbutton&gtClick me!&lt/button&gt</code>
+                                <button>Click me!</button>
+                            </p>
+
+                         <li>Subscript tag</li>   
+                         <p>
+                            This put texts as subscript in relation to other texts. It is written as,
+                            <code>&ltsub&gtI am down&lt/sub&gt</code>
+                            <p>17<sub>th</sub></p>
+                         </p>
+
+                        <li>Superscript tag</li>
+                        <p>
+                           This puts texts as superscript in relation to other texts. It is written as,
+                            <code>&ltsup&gtI am up!&lt/sup&gt</code>
+                            17<sup>th</sup>
+                        </p>
+
+                        <li>Anchor tag</li>
+                        <p>
+                            This is used to put links into a webpage. It is written as, 
+                                <code>&lta href = “url”&gtClick me&lt/a&gt</code>
+                                <a href = “#”>Click me</a>
+                        </p>
+                    </ul>
+                </section>
+            </main>
+        </div>
+            
+        <a href="#semihead"><img id = "fix" src="data:image/png;base64,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" width = "120px" height = "100px" alt="">
+    </div></a>
+    
+    <footer>
+        <p>Copyright &copy 2021, by Jemimah Enyonam Kwakuyi</p>
+    </footer>
+</body>
+</html>
